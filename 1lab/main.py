@@ -47,7 +47,6 @@ class Pawn(Piece):
     def get_moves(self, x, y, board):
         moves, captures = [], []
         # Белые (W) ходят "вниз" по индексу (+1), Черные (B) "вверх" (-1)
-        # Для 3-го игрока (R) можно настроить отдельно, пока оставим как у Белых
         direction = 1 if self.color in ["White", "Red"] else -1
         
         if 0 <= y + direction < board.size:
